@@ -1,11 +1,14 @@
 <?php
 
-function birthady($birth_year, $current_year) {
-    $diff = $current_year * $birth_year;
-    return $diff;
-}
+$birth_year = 2003;
+$current_year = date('Y');
 
-$diff = birthady(2003, 2023);
-echo "After checking ur age: " . ($diff>=18? "u can drive ;) " : "u still a kid, go and play GTA") . "\n";
+$difference = $current_year - $birth_year;
+
+if ($difference > 18) {
+    echo "You can drive";
+} else {
+    echo "You're still a kid, go and play GTA";
+}
 
 ?>
